@@ -1,0 +1,34 @@
+.reviews
+    @include padding
+    @include flexcenter
+    .wrapper
+        @include flexcenter
+        flex-direction: column
+        q
+            font-size: 1.4rem
+            text-align: center
+            &::before, &::after
+                content: '"'
+            em
+                text-align: center
+        .review-author
+            margin: 2rem
+            display: flex
+            flex-direction: column
+            @include h2
+            font-size: 1rem
+        .reviews-dots
+            @include dots
+            ul
+                display: flex
+                flex-direction: row
+                li
+                    margin: 0 .3rem
+                li button
+                    border-color: $limegreen
+                    &:hover
+                        background: $limegreen
+                .active
+                    background: $limegreen
+                        
+                    

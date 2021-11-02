@@ -1,0 +1,75 @@
+@mixin underlineoverline
+    border-top: solid $white 2px
+    border-bottom: solid $white 2px
+
+@mixin robotoregular
+    font-family: 'Roboto', Arial, Helvetica, sans-serif
+    font-weight: 400
+
+@mixin robotomedium
+    font-family: 'Roboto', Arial, Helvetica, sans-serif
+    font-weight: 500
+
+@mixin robotobold
+    font-family: 'Roboto', Arial, Helvetica, sans-serif
+    font-weight: 700
+
+@mixin button
+    color: $limegreen
+    width: fit-content
+    padding: .8rem 2.5rem
+    border: solid $limegreen 2px
+    text-transform: uppercase
+    transition: all ease 100ms
+    @include robotobold
+    &:hover
+        background: $limegreen
+        color: $white
+
+@mixin padding
+    padding-top: 5rem
+    padding-bottom: 5rem
+
+@mixin h2
+    color: $darktextcolor
+    @include robotobold
+    font-size: 1.6rem
+    margin-bottom: 1.8rem
+    text-transform: uppercase
+
+@mixin gridsection
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    column-gap: 5rem
+
+@mixin flexcenter
+    display: flex
+    justify-content: center
+    align-items: center
+    
+@mixin firstchildmargin
+    margin-top: 50px
+
+@mixin hr
+    margin: 1.8rem 0 1.2rem 0
+    border-top: solid darken($lightgrey, 10%) 1px
+    width: 100%
+    height: 0
+
+@mixin dots
+    ul
+        list-style: none
+        width: fit-content
+        display: flex
+        flex-direction: column
+        li button
+            background-color: inherit
+            width: 10px
+            height: 10px
+            border: solid $white 2px
+            border-radius: 50%
+            transition: background ease 200ms
+            &:hover
+                background: $white
+        button
+            cursor: pointer

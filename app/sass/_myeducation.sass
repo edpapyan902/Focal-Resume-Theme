@@ -1,0 +1,40 @@
+.myeducation
+    @include padding
+    @include flexcenter
+    .myeducationgrid 
+        @include gridsection
+        h2
+            @include h2
+        hr
+            @include hr
+            width: 100%
+        .myeducation-infos, .myeducation-items
+            height: min-content
+        .myeducation-items
+            display: flex
+            flex-direction: column
+            .myeducation-item
+                width: 100%
+                margin-bottom: 3.5rem
+                &:first-child
+                    @include firstchildmargin
+                h3 
+                    @include h2
+                    font-size: 1.2rem
+                    margin-bottom: .8rem
+                .diploma-infos
+                    margin-bottom: 1rem
+                    .date::before
+                        content: '/ '
+                .badge
+                    @include robotomedium
+                    color: $white
+                    font-size: .8rem
+                    background: $limegreen
+                    padding: .3rem .7rem
+                hr
+                    @include hr
+    .wrapper
+        hr
+            @include hr
+            margin: 2rem 0 5rem 0

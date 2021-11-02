@@ -1,0 +1,85 @@
+header
+    display: flex
+    flex-direction: column
+    width: 100%
+    .wrapper
+        position: relative
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 100%
+    .main-header-img
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 750px
+        background: url("../img/header.png")
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: center
+        .main-header-img-infos
+            width: fit-content
+            height: fit-content
+            color: $white
+            position: absolute
+            display: flex
+            flex-direction: column
+            align-items: center
+            h1
+                text-align: center
+                width: fit-content
+                padding: .5rem 0
+                text-transform: uppercase
+                font-size: 3.5rem
+                @include underlineoverline
+                @include robotobold
+            .button
+                color: $white
+                margin-top: 40px
+                border-color: $white
+                &:hover
+                    color: $textcolor
+                    background: $white
+        .section-dots
+            right: 0
+            bottom: 2rem
+            position: absolute
+            @include dots
+            .active
+                background: $white
+
+    .main-header-subnav
+        display: flex
+        justify-content: center
+        background: $darkgrey1
+        width: 100%
+        height: 65px
+        color: $white
+        .wrapper
+            display: flex
+            justify-content: space-between
+        .subnav-logo
+            align-items: center
+            display: grid
+            grid-template-columns: auto auto
+            column-gap: 1.2rem
+            width: fit-content
+            height: 100%
+            img
+                display: block
+                max-width: 100%
+
+        nav 
+            display: flex
+            a
+                padding: 0 1rem
+                font-size: .9rem
+                @include robotomedium
+                text-transform: uppercase
+                transition: color ease 75ms
+                &:hover
+                    color: $limegreen
+                &:last-child
+                    padding-right: 0
+
+        

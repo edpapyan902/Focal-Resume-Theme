@@ -1,0 +1,44 @@
+.my-skills
+    @include flexcenter
+    @include padding
+    .wrapper 
+        @include gridsection
+        height: 100%
+        .my-skills-infos
+            h2
+                @include h2
+            p
+                margin-bottom: 2.5rem
+        .my-skills-progressbars
+            display: flex
+            flex-direction: column
+            width: 100%
+            .progressbar-item
+                margin: 1rem 0
+                .skill-title
+                    @include h2
+                    font-size: 1.2rem
+                .progressbar-status
+                    margin-top: .8rem
+                    background: $lightgrey
+                    .filled-bar
+                        @include robotobold
+                        color: $white
+                        display: flex
+                        justify-content: flex-end
+                        background: $limegreen
+                        height: 100%
+                        padding: .3rem 0
+                        span 
+                            font-size: .95rem
+                            margin-right: .6rem
+                    .photoshop
+                        width: 90%
+                    .illustrator
+                        width: 80%
+                    .htmlcss
+                        width: 90%
+                    .phpmysql
+                        width: 70%
+                &:first-child
+                    margin-top: 50px

@@ -1,0 +1,45 @@
+// initialization
+@import 'fonts'
+@import 'globalreset'
+@import 'variables'
+@import 'mixins'
+
+// content styling
+@import 'header'
+@import 'valuesgoalhobbies'
+@import 'aboutme'
+@import 'myskills'
+@import 'resume'
+@import 'myeducation'
+@import 'reviews'
+@import 'portfolio'
+@import 'contact-me'
+@import 'footer'
+
+
+// common
+html
+    scroll-behavior: smooth
+
+body
+    @include robotoregular
+    color: $textcolor
+
+.wrapper 
+    width: 60%
+
+a 
+    color: inherit
+    text-decoration: none
+
+.button
+    @include button
+
+p, q, textarea
+    line-height: 180%
+
+.lightgrey
+    background: $lightgrey
+
+.justify
+    text-align: justify

@@ -1,0 +1,68 @@
+.portfolio
+    @include padding
+    @include flexcenter
+    .wrapper
+        @include flexcenter
+        flex-direction: column
+        h2
+            @include h2
+        p
+            text-align: center
+            margin: 1rem 0 5rem 0
+        .portfolio-projects
+            display: grid
+            justify-content: center
+            grid-template-columns: repeat(3,minmax(200px, 400px))
+            gap: 2rem
+            width: 100%
+            .filter-by-category
+                background: $darkgrey1
+                padding: 2rem
+                display: flex
+                flex-direction: column
+                max-width: 100%
+                span
+                    @include h2
+                    color: $white
+                    font-size: 1rem
+                .active
+                    color: $white
+                a
+                    width: fit-content
+                    margin: .2rem 0
+                    transition: color ease 100ms
+                    &:hover
+                        color: $white
+            .portfolio-item
+                position: relative
+                width: 100%
+                height: 265px
+                background-size: cover
+                &:hover > .project-hover-ui
+                    opacity: 1
+                .project-hover-ui
+                    @include flexcenter
+                    opacity: 0
+                    position: absolute
+                    width: 100%
+                    height: 100%
+                    background: rgba($limegreen, .8)
+                    transition: opacity ease-in-out 100ms
+                    img
+                        width: 40px
+            .giraffe-restaurant
+                background: url('../img/img3.png') center no-repeat
+            .ui-wireframe
+                background: url('../img/img4.png') center no-repeat
+            .ontario
+                background: url('../img/img5.png') center no-repeat
+            .icons-pack
+                background: url('../img/img6.png') center no-repeat
+            .geometric
+                background: url('../img/img7.png') center no-repeat
+            .elena-wireframe
+                background: url('../img/img8.png') center no-repeat
+            .form-layout
+                background: url('../img/img9.png') center no-repeat
+            .mockup
+                background: url('../img/img10.png') center no-repeat
